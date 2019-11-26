@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class Conexao {
 	private static String nome_db = "jdbc:mysql://localhost/banco_aula_sauer?useSSL=false&requireSSL=false";
 	private static String user_db = "root";
-	private static String senha_db = "root";
+	private static String senha_db = "";
 	
 	public static Connection faz_conexao() throws SQLException{
 		try {

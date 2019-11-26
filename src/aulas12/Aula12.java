@@ -22,7 +22,7 @@ public class Aula12 {
 		
 		
 		
-		String file = "planilhacep.csv";
+		String file = "teste.csv";
 		try (BufferedReader br = new BufferedReader(new FileReader(file))) {
 		    String line;
 		    
@@ -32,7 +32,7 @@ public class Aula12 {
 		    	String bairro = line.split(";")[2];
 		    	String cod_estado = line.split(";")[4];
 		    	
-		    	InsertMongo(cep,logradouro,bairro,cod_estado);
+		    	/*InsertMongo(cep,logradouro,bairro,cod_estado);*/
 		    	Insert(cep,logradouro,bairro,cod_estado);
 		    	  
 		    	//System.out.println(cep+" "+logradouro+"  "+bairro+" "+cod_estado+" ");
@@ -80,6 +80,7 @@ public class Aula12 {
 		try {
 			con = Conexao.faz_conexao();
 			String sql = "INSERT INTO `info_cep`(`CEP`, `LOGRADOURO`, `BAIRRO`, `COD_EST`) VALUES (?,?,?,?)";
+						
 	    	PreparedStatement stmt = (PreparedStatement) con.prepareStatement(sql);
 	    	stmt.setString(1, cep  );
 	    	stmt.setString(2, logradouro);
@@ -98,16 +99,6 @@ public class Aula12 {
     	
     	    	
 	}
-	
-	
-
-public static void InsertMongo (String cep, String logradouro, String bairro, String cod_estado) {
-	
-	ConexaoMongoDB c = new ConexaoMongoDB();
-	c.insereAluno(cep, logradouro, bairro,cod_estado);
-	
-	    	
-}
 
 
 }
