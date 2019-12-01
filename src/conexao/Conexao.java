@@ -3,11 +3,11 @@ package conexao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
+ // Realizando a conexão com o mySQL.
 public class Conexao {
 	private static String nome_db = "jdbc:mysql://localhost/banco_aula_sauer?useSSL=false&requireSSL=false";
 	private static String user_db = "root";
-	private static String senha_db = "";
+	private static String senha_db = "root";
 	
 	public static Connection faz_conexao() throws SQLException{
 		try {

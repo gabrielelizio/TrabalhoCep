@@ -1,6 +1,7 @@
 package Thread;
 public class MinhaThreadRunnable implements Runnable {
 
+	@SuppressWarnings("unused")
 	private String nome;
 	private int tempo;
 

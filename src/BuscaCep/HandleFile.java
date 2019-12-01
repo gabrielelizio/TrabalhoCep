@@ -1,4 +1,4 @@
-package aulas12;
+package BuscaCep;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -7,7 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class Arquivo {
+public class HandleFile {
 
 	//P/ fazer leitura, usa-se o BufferedReader
 	public static String Read(String Caminho){
